@@ -1,0 +1,1355 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD02F6A126F0749400625DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6A026F0749400625DE7 /* AppDelegate.swift */; };
+		CD02F6AA26F0749600625DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD02F6A926F0749600625DE7 /* Assets.xcassets */; };
+		CD02F6AD26F0749600625DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD02F6AB26F0749600625DE7 /* LaunchScreen.storyboard */; };
+		CD02F6C326F0749600625DE7 /* weatherforecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6C226F0749600625DE7 /* weatherforecastUITests.swift */; };
+		CD02F6D926F07E9600625DE7 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6D826F07E9600625DE7 /* AppAppearance.swift */; };
+		CD02F6DB26F07F3E00625DE7 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6DA26F07F3E00625DE7 /* AppConfiguration.swift */; };
+		CD02F6DD26F07F7800625DE7 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6DC26F07F7800625DE7 /* AppFlowCoordinator.swift */; };
+		CD02F6DF26F07FA000625DE7 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6DE26F07FA000625DE7 /* AppDIContainer.swift */; };
+		CD02F6E126F0805400625DE7 /* WeatherForecastSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6E026F0805400625DE7 /* WeatherForecastSceneDIContainer.swift */; };
+		CD02F6E626F0822D00625DE7 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6E526F0822D00625DE7 /* CoreDataStorage.swift */; };
+		CD02F6E926F082C900625DE7 /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6E726F082C900625DE7 /* CoreDataStorage.xcdatamodeld */; };
+		CD02F6EB26F083B600625DE7 /* ForecastQueriesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6EA26F083B600625DE7 /* ForecastQueriesStorage.swift */; };
+		CD02F6EE26F083FB00625DE7 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6ED26F083FB00625DE7 /* Forecast.swift */; };
+		CD02F6F026F0840B00625DE7 /* ForecastQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6EF26F0840B00625DE7 /* ForecastQuery.swift */; };
+		CD02F6F426F0903500625DE7 /* CoreDataForecastQueriesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6F326F0903500625DE7 /* CoreDataForecastQueriesStorage.swift */; };
+		CD02F73A26F09BCA00625DE7 /* ForecastQueryEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F73926F09BCA00625DE7 /* ForecastQueryEntity+Mapping.swift */; };
+		CD02F73C26F09CF000625DE7 /* ForecastResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F73B26F09CF000625DE7 /* ForecastResponseStorage.swift */; };
+		CD02F74026F09D9700625DE7 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F73F26F09D9700625DE7 /* APIEndpoints.swift */; };
+		CD02F74326F09E3000625DE7 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74226F09E3000625DE7 /* DataTransferService.swift */; };
+		CD02F74526F09E4600625DE7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74426F09E4600625DE7 /* NetworkService.swift */; };
+		CD02F74726F09E5000625DE7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74626F09E5000625DE7 /* Endpoint.swift */; };
+		CD02F74926F09E5D00625DE7 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74826F09E5C00625DE7 /* NetworkConfig.swift */; };
+		CD02F74C26F09FFF00625DE7 /* ForecastRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74B26F09FFF00625DE7 /* ForecastRequestDTO+Mapping.swift */; };
+		CD02F74E26F0A0B800625DE7 /* ForecastResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74D26F0A0B800625DE7 /* ForecastResponseDTO+Mapping.swift */; };
+		CD02F75026F0A66700625DE7 /* ForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74F26F0A66700625DE7 /* ForecastRepositoryImpl.swift */; };
+		CD02F75326F0A77E00625DE7 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75226F0A77E00625DE7 /* ForecastRepository.swift */; };
+		CD02F75526F0A8A100625DE7 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75426F0A8A100625DE7 /* Cancelable.swift */; };
+		CD02F75726F0A8B600625DE7 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75626F0A8B600625DE7 /* ConnectionError.swift */; };
+		CD02F75A26F0AB9500625DE7 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75926F0AB9500625DE7 /* RepositoryTask.swift */; };
+		CD02F75D26F0C8F200625DE7 /* SearchForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75C26F0C8F200625DE7 /* SearchForecastUseCase.swift */; };
+		CD02F76226F0CBB900625DE7 /* ForecastQueriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76126F0CBB900625DE7 /* ForecastQueriesRepository.swift */; };
+		CD02F76426F0CF9200625DE7 /* FetchRecentForecastQueriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76326F0CF9200625DE7 /* FetchRecentForecastQueriesUseCase.swift */; };
+		CD02F76626F0D74900625DE7 /* ForecastQueriesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76526F0D74900625DE7 /* ForecastQueriesRepositoryImpl.swift */; };
+		CD02F76826F0DA0100625DE7 /* CoreDataForecastResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76726F0DA0100625DE7 /* CoreDataForecastResponseStorage.swift */; };
+		CD02F76B26F0EDA400625DE7 /* ForecastsResponseEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76A26F0EDA400625DE7 /* ForecastsResponseEntity+Mapping.swift */; };
+		CDE29EF226F46A3800F4DFE3 /* SeachForecastUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29EF126F46A3800F4DFE3 /* SeachForecastUseCaseTest.swift */; };
+		CDE29EF326F46AE000F4DFE3 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6ED26F083FB00625DE7 /* Forecast.swift */; };
+		CDE29EF426F46AE400F4DFE3 /* ForecastQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6EF26F0840B00625DE7 /* ForecastQuery.swift */; };
+		CDE29EF526F46B3400F4DFE3 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75226F0A77E00625DE7 /* ForecastRepository.swift */; };
+		CDE29EF626F46B3700F4DFE3 /* ForecastQueriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76126F0CBB900625DE7 /* ForecastQueriesRepository.swift */; };
+		CDE29EF726F46B3A00F4DFE3 /* ForecastImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9240826F3B40700512021 /* ForecastImagesRepository.swift */; };
+		CDE29EF826F46BF500F4DFE3 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75426F0A8A100625DE7 /* Cancelable.swift */; };
+		CDE29EF926F46BF900F4DFE3 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75626F0A8B600625DE7 /* ConnectionError.swift */; };
+		CDE29EFA26F46BFF00F4DFE3 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74226F09E3000625DE7 /* DataTransferService.swift */; };
+		CDE29EFB26F46C0100F4DFE3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74426F09E4600625DE7 /* NetworkService.swift */; };
+		CDE29EFC26F46C0300F4DFE3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74626F09E5000625DE7 /* Endpoint.swift */; };
+		CDE29EFD26F46C0500F4DFE3 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74826F09E5C00625DE7 /* NetworkConfig.swift */; };
+		CDE29EFE26F46C0A00F4DFE3 /* ForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74F26F0A66700625DE7 /* ForecastRepositoryImpl.swift */; };
+		CDE29EFF26F46C0C00F4DFE3 /* ForecastQueriesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76526F0D74900625DE7 /* ForecastQueriesRepositoryImpl.swift */; };
+		CDE29F0026F46C0E00F4DFE3 /* ForecastImagesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9240626F3B3B000512021 /* ForecastImagesRepositoryImpl.swift */; };
+		CDE29F0126F46C1200F4DFE3 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75926F0AB9500625DE7 /* RepositoryTask.swift */; };
+		CDE29F0226F46C1A00F4DFE3 /* FetchRecentForecastQueriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76326F0CF9200625DE7 /* FetchRecentForecastQueriesUseCase.swift */; };
+		CDE29F0326F46C1C00F4DFE3 /* SearchForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F75C26F0C8F200625DE7 /* SearchForecastUseCase.swift */; };
+		CDE29F0426F46C3C00F4DFE3 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F73F26F09D9700625DE7 /* APIEndpoints.swift */; };
+		CDE29F0526F472AA00F4DFE3 /* ForecastRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74B26F09FFF00625DE7 /* ForecastRequestDTO+Mapping.swift */; };
+		CDE29F0626F472AC00F4DFE3 /* ForecastResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F74D26F0A0B800625DE7 /* ForecastResponseDTO+Mapping.swift */; };
+		CDE29F0726F472BD00F4DFE3 /* ForecastQueriesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6EA26F083B600625DE7 /* ForecastQueriesStorage.swift */; };
+		CDE29F0826F472D600F4DFE3 /* ForecastResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F73B26F09CF000625DE7 /* ForecastResponseStorage.swift */; };
+		CDE29F0926F472E300F4DFE3 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6E526F0822D00625DE7 /* CoreDataStorage.swift */; };
+		CDE29F0C26F4B47600F4DFE3 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F0B26F4B47600F4DFE3 /* NetworkServiceTests.swift */; };
+		CDE29F0F26F4B4B000F4DFE3 /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F0E26F4B4B000F4DFE3 /* NetworkConfigurableMock.swift */; };
+		CDE29F1126F4B4C900F4DFE3 /* NetworkSessionManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F1026F4B4C900F4DFE3 /* NetworkSessionManagerMock.swift */; };
+		CDE29F1326F4B50700F4DFE3 /* DataTransferServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F1226F4B50700F4DFE3 /* DataTransferServiceTests.swift */; };
+		CDE29F1626F4B6A800F4DFE3 /* ForecastListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F1526F4B6A800F4DFE3 /* ForecastListViewModelTests.swift */; };
+		CDE29F1726F4B86800F4DFE3 /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE426F1C31900B9BE09 /* ForecastListViewModel.swift */; };
+		CDE29F1826F4B86C00F4DFE3 /* ForecastListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE626F1C8CC00B9BE09 /* ForecastListItemViewModel.swift */; };
+		CDE29F1926F4B9A100F4DFE3 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9240426F26A7800512021 /* DoubleExtensions.swift */; };
+		CDE29F1A26F4B9B600F4DFE3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD226F1BBB900B9BE09 /* Observable.swift */; };
+		CDE29F1B26F4B9C900F4DFE3 /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE926F1E06E00B9BE09 /* BackButtonEmptyTitleNavigationBarBehavior.swift */; };
+		CDE29F1C26F4B9CB00F4DFE3 /* BlackStyleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BEB26F1E08600B9BE09 /* BlackStyleNavigationBarBehavior.swift */; };
+		CDE29F1D26F4B9D000F4DFE3 /* ForecastSearchFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BBA26F1B9CE00B9BE09 /* ForecastSearchFlowCoordinator.swift */; };
+		CDE29F1E26F4B9D300F4DFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6A026F0749400625DE7 /* AppDelegate.swift */; };
+		CDE29F1F26F4B9D500F4DFE3 /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6D826F07E9600625DE7 /* AppAppearance.swift */; };
+		CDE29F2026F4B9D700F4DFE3 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6DA26F07F3E00625DE7 /* AppConfiguration.swift */; };
+		CDE29F2126F4B9D900F4DFE3 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6DC26F07F7800625DE7 /* AppFlowCoordinator.swift */; };
+		CDE29F2226F4B9DB00F4DFE3 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6DE26F07FA000625DE7 /* AppDIContainer.swift */; };
+		CDE29F2326F4B9DD00F4DFE3 /* WeatherForecastSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6E026F0805400625DE7 /* WeatherForecastSceneDIContainer.swift */; };
+		CDE29F2426F4B9E500F4DFE3 /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BDA26F1BCE300B9BE09 /* ForecastListViewController.swift */; };
+		CDE29F2526F4B9E800F4DFE3 /* ForecastListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BDF26F1C04300B9BE09 /* ForecastListTableViewController.swift */; };
+		CDE29F2626F4B9EB00F4DFE3 /* ForecastListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE226F1C09900B9BE09 /* ForecastListItemCell.swift */; };
+		CDE29F2726F4B9EF00F4DFE3 /* ForecastQueryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF426F1E85500B9BE09 /* ForecastQueryListViewModel.swift */; };
+		CDE29F2826F4B9F100F4DFE3 /* ForecastQueryListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF626F1E89600B9BE09 /* ForecastQueryListItemViewModel.swift */; };
+		CDE29F2926F4B9F800F4DFE3 /* ForecastQueriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF926F20DE800B9BE09 /* ForecastQueriesTableViewController.swift */; };
+		CDE29F2B26F4BA0C00F4DFE3 /* UIViewController+AddBehaviors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC126F1BAA700B9BE09 /* UIViewController+AddBehaviors.swift */; };
+		CDE29F2C26F4BA0F00F4DFE3 /* UIViewController+AddChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC326F1BAE200B9BE09 /* UIViewController+AddChild.swift */; };
+		CDE29F2D26F4BA1100F4DFE3 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC526F1BAFA00B9BE09 /* UIViewController+ActivityIndicator.swift */; };
+		CDE29F2E26F4BA1300F4DFE3 /* UIImageView+ImageSizeAfterAspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC726F1BB1C00B9BE09 /* UIImageView+ImageSizeAfterAspectFit.swift */; };
+		CDE29F2F26F4BA1500F4DFE3 /* CGSize+ScaledSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC926F1BB3500B9BE09 /* CGSize+ScaledSize.swift */; };
+		CDE29F3026F4BA1700F4DFE3 /* DataTransferError+ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BCB26F1BB4F00B9BE09 /* DataTransferError+ConnectionError.swift */; };
+		CDE29F3126F4BA5000F4DFE3 /* CoreDataForecastQueriesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6F326F0903500625DE7 /* CoreDataForecastQueriesStorage.swift */; };
+		CDE29F3226F4BA5700F4DFE3 /* CoreDataForecastResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76726F0DA0100625DE7 /* CoreDataForecastResponseStorage.swift */; };
+		CDE29F3326F4BA5D00F4DFE3 /* ForecastQueryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF026F1E7AE00B9BE09 /* ForecastQueryListView.swift */; };
+		CDE29F3426F4BA6E00F4DFE3 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD026F1BB9B00B9BE09 /* StoryboardInstantiable.swift */; };
+		CDE29F3526F4BA7800F4DFE3 /* ForecastQueriesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BFD26F20EB000B9BE09 /* ForecastQueriesItemCell.swift */; };
+		CDE29F3626F4BA8B00F4DFE3 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BCE26F1BB7D00B9BE09 /* Alertable.swift */; };
+		CDE29F3726F4BA9400F4DFE3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD626F1BC0100B9BE09 /* LoadingView.swift */; };
+		CDE29F3826F4BA9900F4DFE3 /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD426F1BBD700B9BE09 /* AccessibilityIdentifier.swift */; };
+		CDE29F3926F4BAC800F4DFE3 /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD02F6E726F082C900625DE7 /* CoreDataStorage.xcdatamodeld */; };
+		CDE29F3A26F4BACF00F4DFE3 /* ForecastQueryEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F73926F09BCA00625DE7 /* ForecastQueryEntity+Mapping.swift */; };
+		CDE29F3B26F4BAD400F4DFE3 /* ForecastsResponseEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02F76A26F0EDA400625DE7 /* ForecastsResponseEntity+Mapping.swift */; };
+		CDE29F3D26F4BD3000F4DFE3 /* ForecastQueriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F3C26F4BD3000F4DFE3 /* ForecastQueriesListViewModel.swift */; };
+		CDE29F3F26F4F07900F4DFE3 /* FetchRecentForecastQueriesUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE29F3E26F4F07900F4DFE3 /* FetchRecentForecastQueriesUseCaseTest.swift */; };
+		CDE9240526F26A7800512021 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9240426F26A7800512021 /* DoubleExtensions.swift */; };
+		CDE9240726F3B3B000512021 /* ForecastImagesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9240626F3B3B000512021 /* ForecastImagesRepositoryImpl.swift */; };
+		CDE9240926F3B40700512021 /* ForecastImagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9240826F3B40700512021 /* ForecastImagesRepository.swift */; };
+		CDF72BBB26F1B9CE00B9BE09 /* ForecastSearchFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BBA26F1B9CE00B9BE09 /* ForecastSearchFlowCoordinator.swift */; };
+		CDF72BC226F1BAA700B9BE09 /* UIViewController+AddBehaviors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC126F1BAA700B9BE09 /* UIViewController+AddBehaviors.swift */; };
+		CDF72BC426F1BAE200B9BE09 /* UIViewController+AddChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC326F1BAE200B9BE09 /* UIViewController+AddChild.swift */; };
+		CDF72BC626F1BAFA00B9BE09 /* UIViewController+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC526F1BAFA00B9BE09 /* UIViewController+ActivityIndicator.swift */; };
+		CDF72BC826F1BB1C00B9BE09 /* UIImageView+ImageSizeAfterAspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC726F1BB1C00B9BE09 /* UIImageView+ImageSizeAfterAspectFit.swift */; };
+		CDF72BCA26F1BB3500B9BE09 /* CGSize+ScaledSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BC926F1BB3500B9BE09 /* CGSize+ScaledSize.swift */; };
+		CDF72BCC26F1BB4F00B9BE09 /* DataTransferError+ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BCB26F1BB4F00B9BE09 /* DataTransferError+ConnectionError.swift */; };
+		CDF72BCF26F1BB7D00B9BE09 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BCE26F1BB7D00B9BE09 /* Alertable.swift */; };
+		CDF72BD126F1BB9B00B9BE09 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD026F1BB9B00B9BE09 /* StoryboardInstantiable.swift */; };
+		CDF72BD326F1BBB900B9BE09 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD226F1BBB900B9BE09 /* Observable.swift */; };
+		CDF72BD526F1BBD700B9BE09 /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD426F1BBD700B9BE09 /* AccessibilityIdentifier.swift */; };
+		CDF72BD726F1BC0100B9BE09 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BD626F1BC0100B9BE09 /* LoadingView.swift */; };
+		CDF72BDB26F1BCE300B9BE09 /* ForecastListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BDA26F1BCE300B9BE09 /* ForecastListViewController.swift */; };
+		CDF72BDD26F1BD5A00B9BE09 /* ForecastListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF72BDC26F1BD5A00B9BE09 /* ForecastListViewController.storyboard */; };
+		CDF72BE026F1C04300B9BE09 /* ForecastListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BDF26F1C04300B9BE09 /* ForecastListTableViewController.swift */; };
+		CDF72BE326F1C09900B9BE09 /* ForecastListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE226F1C09900B9BE09 /* ForecastListItemCell.swift */; };
+		CDF72BE526F1C31900B9BE09 /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE426F1C31900B9BE09 /* ForecastListViewModel.swift */; };
+		CDF72BE726F1C8CC00B9BE09 /* ForecastListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE626F1C8CC00B9BE09 /* ForecastListItemViewModel.swift */; };
+		CDF72BEA26F1E06E00B9BE09 /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BE926F1E06E00B9BE09 /* BackButtonEmptyTitleNavigationBarBehavior.swift */; };
+		CDF72BEC26F1E08600B9BE09 /* BlackStyleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BEB26F1E08600B9BE09 /* BlackStyleNavigationBarBehavior.swift */; };
+		CDF72BF126F1E7AE00B9BE09 /* ForecastQueryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF026F1E7AE00B9BE09 /* ForecastQueryListView.swift */; };
+		CDF72BF526F1E85500B9BE09 /* ForecastQueryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF426F1E85500B9BE09 /* ForecastQueryListViewModel.swift */; };
+		CDF72BF726F1E89600B9BE09 /* ForecastQueryListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF626F1E89600B9BE09 /* ForecastQueryListItemViewModel.swift */; };
+		CDF72BFA26F20DE800B9BE09 /* ForecastQueriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BF926F20DE800B9BE09 /* ForecastQueriesTableViewController.swift */; };
+		CDF72BFC26F20DFE00B9BE09 /* ForecastQueriesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF72BFB26F20DFE00B9BE09 /* ForecastQueriesTableViewController.storyboard */; };
+		CDF72BFE26F20EB000B9BE09 /* ForecastQueriesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72BFD26F20EB000B9BE09 /* ForecastQueriesItemCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD02F6B426F0749600625DE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD02F69526F0749400625DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD02F69C26F0749400625DE7;
+			remoteInfo = weatherforecast;
+		};
+		CD02F6BF26F0749600625DE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD02F69526F0749400625DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD02F69C26F0749400625DE7;
+			remoteInfo = weatherforecast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD02F69D26F0749400625DE7 /* weatherforecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherforecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD02F6A026F0749400625DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD02F6A926F0749600625DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD02F6AC26F0749600625DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD02F6AE26F0749600625DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD02F6B326F0749600625DE7 /* weatherforecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherforecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD02F6B926F0749600625DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD02F6BE26F0749600625DE7 /* weatherforecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherforecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD02F6C226F0749600625DE7 /* weatherforecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherforecastUITests.swift; sourceTree = "<group>"; };
+		CD02F6C426F0749600625DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD02F6D826F07E9600625DE7 /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		CD02F6DA26F07F3E00625DE7 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		CD02F6DC26F07F7800625DE7 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		CD02F6DE26F07FA000625DE7 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		CD02F6E026F0805400625DE7 /* WeatherForecastSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastSceneDIContainer.swift; sourceTree = "<group>"; };
+		CD02F6E526F0822D00625DE7 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		CD02F6E826F082C900625DE7 /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
+		CD02F6EA26F083B600625DE7 /* ForecastQueriesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueriesStorage.swift; sourceTree = "<group>"; };
+		CD02F6ED26F083FB00625DE7 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		CD02F6EF26F0840B00625DE7 /* ForecastQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQuery.swift; sourceTree = "<group>"; };
+		CD02F6F326F0903500625DE7 /* CoreDataForecastQueriesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataForecastQueriesStorage.swift; sourceTree = "<group>"; };
+		CD02F73926F09BCA00625DE7 /* ForecastQueryEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastQueryEntity+Mapping.swift"; sourceTree = "<group>"; };
+		CD02F73B26F09CF000625DE7 /* ForecastResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponseStorage.swift; sourceTree = "<group>"; };
+		CD02F73F26F09D9700625DE7 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		CD02F74226F09E3000625DE7 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		CD02F74426F09E4600625DE7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CD02F74626F09E5000625DE7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CD02F74826F09E5C00625DE7 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		CD02F74B26F09FFF00625DE7 /* ForecastRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
+		CD02F74D26F0A0B800625DE7 /* ForecastResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		CD02F74F26F0A66700625DE7 /* ForecastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImpl.swift; sourceTree = "<group>"; };
+		CD02F75226F0A77E00625DE7 /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
+		CD02F75426F0A8A100625DE7 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		CD02F75626F0A8B600625DE7 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		CD02F75926F0AB9500625DE7 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
+		CD02F75C26F0C8F200625DE7 /* SearchForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForecastUseCase.swift; sourceTree = "<group>"; };
+		CD02F76126F0CBB900625DE7 /* ForecastQueriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueriesRepository.swift; sourceTree = "<group>"; };
+		CD02F76326F0CF9200625DE7 /* FetchRecentForecastQueriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRecentForecastQueriesUseCase.swift; sourceTree = "<group>"; };
+		CD02F76526F0D74900625DE7 /* ForecastQueriesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueriesRepositoryImpl.swift; sourceTree = "<group>"; };
+		CD02F76726F0DA0100625DE7 /* CoreDataForecastResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataForecastResponseStorage.swift; sourceTree = "<group>"; };
+		CD02F76A26F0EDA400625DE7 /* ForecastsResponseEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastsResponseEntity+Mapping.swift"; sourceTree = "<group>"; };
+		CDE29EF126F46A3800F4DFE3 /* SeachForecastUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachForecastUseCaseTest.swift; sourceTree = "<group>"; };
+		CDE29F0B26F4B47600F4DFE3 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		CDE29F0E26F4B4B000F4DFE3 /* NetworkConfigurableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurableMock.swift; sourceTree = "<group>"; };
+		CDE29F1026F4B4C900F4DFE3 /* NetworkSessionManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManagerMock.swift; sourceTree = "<group>"; };
+		CDE29F1226F4B50700F4DFE3 /* DataTransferServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferServiceTests.swift; sourceTree = "<group>"; };
+		CDE29F1526F4B6A800F4DFE3 /* ForecastListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModelTests.swift; sourceTree = "<group>"; };
+		CDE29F3C26F4BD3000F4DFE3 /* ForecastQueriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueriesListViewModel.swift; sourceTree = "<group>"; };
+		CDE29F3E26F4F07900F4DFE3 /* FetchRecentForecastQueriesUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRecentForecastQueriesUseCaseTest.swift; sourceTree = "<group>"; };
+		CDE9240426F26A7800512021 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		CDE9240626F3B3B000512021 /* ForecastImagesRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastImagesRepositoryImpl.swift; sourceTree = "<group>"; };
+		CDE9240826F3B40700512021 /* ForecastImagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastImagesRepository.swift; sourceTree = "<group>"; };
+		CDF72BBA26F1B9CE00B9BE09 /* ForecastSearchFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastSearchFlowCoordinator.swift; sourceTree = "<group>"; };
+		CDF72BC126F1BAA700B9BE09 /* UIViewController+AddBehaviors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddBehaviors.swift"; sourceTree = "<group>"; };
+		CDF72BC326F1BAE200B9BE09 /* UIViewController+AddChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddChild.swift"; sourceTree = "<group>"; };
+		CDF72BC526F1BAFA00B9BE09 /* UIViewController+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		CDF72BC726F1BB1C00B9BE09 /* UIImageView+ImageSizeAfterAspectFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageSizeAfterAspectFit.swift"; sourceTree = "<group>"; };
+		CDF72BC926F1BB3500B9BE09 /* CGSize+ScaledSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+ScaledSize.swift"; sourceTree = "<group>"; };
+		CDF72BCB26F1BB4F00B9BE09 /* DataTransferError+ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTransferError+ConnectionError.swift"; sourceTree = "<group>"; };
+		CDF72BCE26F1BB7D00B9BE09 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		CDF72BD026F1BB9B00B9BE09 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		CDF72BD226F1BBB900B9BE09 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		CDF72BD426F1BBD700B9BE09 /* AccessibilityIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifier.swift; sourceTree = "<group>"; };
+		CDF72BD626F1BC0100B9BE09 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CDF72BDA26F1BCE300B9BE09 /* ForecastListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewController.swift; sourceTree = "<group>"; };
+		CDF72BDC26F1BD5A00B9BE09 /* ForecastListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForecastListViewController.storyboard; sourceTree = "<group>"; };
+		CDF72BDF26F1C04300B9BE09 /* ForecastListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListTableViewController.swift; sourceTree = "<group>"; };
+		CDF72BE226F1C09900B9BE09 /* ForecastListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListItemCell.swift; sourceTree = "<group>"; };
+		CDF72BE426F1C31900B9BE09 /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
+		CDF72BE626F1C8CC00B9BE09 /* ForecastListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListItemViewModel.swift; sourceTree = "<group>"; };
+		CDF72BE926F1E06E00B9BE09 /* BackButtonEmptyTitleNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonEmptyTitleNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		CDF72BEB26F1E08600B9BE09 /* BlackStyleNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackStyleNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		CDF72BF026F1E7AE00B9BE09 /* ForecastQueryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueryListView.swift; sourceTree = "<group>"; };
+		CDF72BF426F1E85500B9BE09 /* ForecastQueryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueryListViewModel.swift; sourceTree = "<group>"; };
+		CDF72BF626F1E89600B9BE09 /* ForecastQueryListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueryListItemViewModel.swift; sourceTree = "<group>"; };
+		CDF72BF926F20DE800B9BE09 /* ForecastQueriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueriesTableViewController.swift; sourceTree = "<group>"; };
+		CDF72BFB26F20DFE00B9BE09 /* ForecastQueriesTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForecastQueriesTableViewController.storyboard; sourceTree = "<group>"; };
+		CDF72BFD26F20EB000B9BE09 /* ForecastQueriesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastQueriesItemCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD02F69A26F0749400625DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD02F6B026F0749600625DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD02F6BB26F0749600625DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD02F69426F0749400625DE7 = {
+			isa = PBXGroup;
+			children = (
+				CD02F69F26F0749400625DE7 /* weatherforecast */,
+				CD02F6B626F0749600625DE7 /* weatherforecastTests */,
+				CD02F6C126F0749600625DE7 /* weatherforecastUITests */,
+				CD02F69E26F0749400625DE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD02F69E26F0749400625DE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F69D26F0749400625DE7 /* weatherforecast.app */,
+				CD02F6B326F0749600625DE7 /* weatherforecastTests.xctest */,
+				CD02F6BE26F0749600625DE7 /* weatherforecastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD02F69F26F0749400625DE7 /* weatherforecast */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6D026F07D3400625DE7 /* Application */,
+				CD02F6D126F07D4400625DE7 /* Presentation */,
+				CD02F6D226F07D4F00625DE7 /* Domain */,
+				CD02F6D326F07D5700625DE7 /* Data */,
+				CD02F74126F09E1B00625DE7 /* Network */,
+				CD02F6D526F07D6E00625DE7 /* Common */,
+				CD02F6D626F07D7500625DE7 /* Resources */,
+			);
+			path = weatherforecast;
+			sourceTree = "<group>";
+		};
+		CD02F6B626F0749600625DE7 /* weatherforecastTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29EED26F4698600F4DFE3 /* Domain */,
+				CDE29EEE26F4699D00F4DFE3 /* Presentation */,
+				CDE29EEF26F469A900F4DFE3 /* Infrastructure */,
+				CDE29EF026F469B700F4DFE3 /* Mocks */,
+				CD02F6B926F0749600625DE7 /* Info.plist */,
+			);
+			path = weatherforecastTests;
+			sourceTree = "<group>";
+		};
+		CD02F6C126F0749600625DE7 /* weatherforecastUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6C226F0749600625DE7 /* weatherforecastUITests.swift */,
+				CD02F6C426F0749600625DE7 /* Info.plist */,
+			);
+			path = weatherforecastUITests;
+			sourceTree = "<group>";
+		};
+		CD02F6D026F07D3400625DE7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6A026F0749400625DE7 /* AppDelegate.swift */,
+				CD02F6D826F07E9600625DE7 /* AppAppearance.swift */,
+				CD02F6DA26F07F3E00625DE7 /* AppConfiguration.swift */,
+				CD02F6DC26F07F7800625DE7 /* AppFlowCoordinator.swift */,
+				CD02F6D726F07E5200625DE7 /* DIContainer */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD02F6D126F07D4400625DE7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BB926F1B99900B9BE09 /* ForecastScene */,
+				CDF72BB826F1B81000B9BE09 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CD02F6D226F07D4F00625DE7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F75B26F0C8CA00625DE7 /* UseCases */,
+				CD02F6EC26F083E400625DE7 /* Entities */,
+				CD02F75126F0A75B00625DE7 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CD02F6D326F07D5700625DE7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F73E26F09D7C00625DE7 /* Repositories */,
+				CD02F73D26F09D6E00625DE7 /* Network */,
+				CD02F6E226F0818500625DE7 /* PersistentStorages */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CD02F6D526F07D6E00625DE7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F75426F0A8A100625DE7 /* Cancelable.swift */,
+				CD02F75626F0A8B600625DE7 /* ConnectionError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CD02F6D626F07D7500625DE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6A926F0749600625DE7 /* Assets.xcassets */,
+				CD02F6AE26F0749600625DE7 /* Info.plist */,
+				CD02F6AB26F0749600625DE7 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CD02F6D726F07E5200625DE7 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6DE26F07FA000625DE7 /* AppDIContainer.swift */,
+				CD02F6E026F0805400625DE7 /* WeatherForecastSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		CD02F6E226F0818500625DE7 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6E326F081CE00625DE7 /* ForecastResponseStorage */,
+				CD02F6E426F081E700625DE7 /* ForecastQueriesStorage */,
+				CD02F73726F09AEF00625DE7 /* CoreDataStorage */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		CD02F6E326F081CE00625DE7 /* ForecastResponseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F73B26F09CF000625DE7 /* ForecastResponseStorage.swift */,
+				CD02F76726F0DA0100625DE7 /* CoreDataForecastResponseStorage.swift */,
+				CD02F76926F0ED7E00625DE7 /* EntityMapping */,
+			);
+			path = ForecastResponseStorage;
+			sourceTree = "<group>";
+		};
+		CD02F6E426F081E700625DE7 /* ForecastQueriesStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6EA26F083B600625DE7 /* ForecastQueriesStorage.swift */,
+				CD02F6F126F08FE400625DE7 /* CoreDataStorage */,
+				CD02F6F226F08FF500625DE7 /* UserDefaultsStorage */,
+			);
+			path = ForecastQueriesStorage;
+			sourceTree = "<group>";
+		};
+		CD02F6EC26F083E400625DE7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6ED26F083FB00625DE7 /* Forecast.swift */,
+				CD02F6EF26F0840B00625DE7 /* ForecastQuery.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CD02F6F126F08FE400625DE7 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6F326F0903500625DE7 /* CoreDataForecastQueriesStorage.swift */,
+				CD02F73826F09B9D00625DE7 /* EntityMapping */,
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		CD02F6F226F08FF500625DE7 /* UserDefaultsStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaultsStorage;
+			sourceTree = "<group>";
+		};
+		CD02F73726F09AEF00625DE7 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F6E526F0822D00625DE7 /* CoreDataStorage.swift */,
+				CD02F6E726F082C900625DE7 /* CoreDataStorage.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
+			sourceTree = "<group>";
+		};
+		CD02F73826F09B9D00625DE7 /* EntityMapping */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F73926F09BCA00625DE7 /* ForecastQueryEntity+Mapping.swift */,
+			);
+			path = EntityMapping;
+			sourceTree = "<group>";
+		};
+		CD02F73D26F09D6E00625DE7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F73F26F09D9700625DE7 /* APIEndpoints.swift */,
+				CD02F74A26F09FC700625DE7 /* DataMapping */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CD02F73E26F09D7C00625DE7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F74F26F0A66700625DE7 /* ForecastRepositoryImpl.swift */,
+				CD02F76526F0D74900625DE7 /* ForecastQueriesRepositoryImpl.swift */,
+				CDE9240626F3B3B000512021 /* ForecastImagesRepositoryImpl.swift */,
+				CD02F75826F0AB8800625DE7 /* Utils */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD02F74126F09E1B00625DE7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F74226F09E3000625DE7 /* DataTransferService.swift */,
+				CD02F74426F09E4600625DE7 /* NetworkService.swift */,
+				CD02F74626F09E5000625DE7 /* Endpoint.swift */,
+				CD02F74826F09E5C00625DE7 /* NetworkConfig.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CD02F74A26F09FC700625DE7 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F74B26F09FFF00625DE7 /* ForecastRequestDTO+Mapping.swift */,
+				CD02F74D26F0A0B800625DE7 /* ForecastResponseDTO+Mapping.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		CD02F75126F0A75B00625DE7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F75226F0A77E00625DE7 /* ForecastRepository.swift */,
+				CD02F76126F0CBB900625DE7 /* ForecastQueriesRepository.swift */,
+				CDE9240826F3B40700512021 /* ForecastImagesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD02F75826F0AB8800625DE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F75926F0AB9500625DE7 /* RepositoryTask.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CD02F75B26F0C8CA00625DE7 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F75C26F0C8F200625DE7 /* SearchForecastUseCase.swift */,
+				CD02F76326F0CF9200625DE7 /* FetchRecentForecastQueriesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CD02F76926F0ED7E00625DE7 /* EntityMapping */ = {
+			isa = PBXGroup;
+			children = (
+				CD02F76A26F0EDA400625DE7 /* ForecastsResponseEntity+Mapping.swift */,
+			);
+			path = EntityMapping;
+			sourceTree = "<group>";
+		};
+		CDE29EED26F4698600F4DFE3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29EF126F46A3800F4DFE3 /* SeachForecastUseCaseTest.swift */,
+				CDE29F3E26F4F07900F4DFE3 /* FetchRecentForecastQueriesUseCaseTest.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CDE29EEE26F4699D00F4DFE3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29F1426F4B66600F4DFE3 /* ForecastScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CDE29EEF26F469A900F4DFE3 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29F0A26F4B44F00F4DFE3 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CDE29EF026F469B700F4DFE3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CDE29F0A26F4B44F00F4DFE3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29F0D26F4B49600F4DFE3 /* Mocks */,
+				CDE29F0B26F4B47600F4DFE3 /* NetworkServiceTests.swift */,
+				CDE29F1226F4B50700F4DFE3 /* DataTransferServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CDE29F0D26F4B49600F4DFE3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29F0E26F4B4B000F4DFE3 /* NetworkConfigurableMock.swift */,
+				CDE29F1026F4B4C900F4DFE3 /* NetworkSessionManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		CDE29F1426F4B66600F4DFE3 /* ForecastScene */ = {
+			isa = PBXGroup;
+			children = (
+				CDE29F1526F4B6A800F4DFE3 /* ForecastListViewModelTests.swift */,
+				CDE29F3C26F4BD3000F4DFE3 /* ForecastQueriesListViewModel.swift */,
+			);
+			path = ForecastScene;
+			sourceTree = "<group>";
+		};
+		CDF72BB826F1B81000B9BE09 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BCD26F1BB6200B9BE09 /* Protocols */,
+				CDF72BC026F1BA8900B9BE09 /* Extentions */,
+				CDF72BD226F1BBB900B9BE09 /* Observable.swift */,
+				CDF72BD426F1BBD700B9BE09 /* AccessibilityIdentifier.swift */,
+				CDF72BD626F1BC0100B9BE09 /* LoadingView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CDF72BB926F1B99900B9BE09 /* ForecastScene */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BBC26F1B9D500B9BE09 /* Flows */,
+				CDF72BBD26F1BA1800B9BE09 /* ForecastList */,
+				CDF72BED26F1E4A800B9BE09 /* ForecastQueriesList */,
+				CDF72BE826F1E05300B9BE09 /* Behaviors */,
+			);
+			path = ForecastScene;
+			sourceTree = "<group>";
+		};
+		CDF72BBC26F1B9D500B9BE09 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BBA26F1B9CE00B9BE09 /* ForecastSearchFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		CDF72BBD26F1BA1800B9BE09 /* ForecastList */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BBF26F1BA3900B9BE09 /* ViewModel */,
+				CDF72BBE26F1BA3200B9BE09 /* View */,
+			);
+			path = ForecastList;
+			sourceTree = "<group>";
+		};
+		CDF72BBE26F1BA3200B9BE09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BDA26F1BCE300B9BE09 /* ForecastListViewController.swift */,
+				CDF72BDC26F1BD5A00B9BE09 /* ForecastListViewController.storyboard */,
+				CDF72BDE26F1BFFC00B9BE09 /* ForecastListTableView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDF72BBF26F1BA3900B9BE09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BE426F1C31900B9BE09 /* ForecastListViewModel.swift */,
+				CDF72BE626F1C8CC00B9BE09 /* ForecastListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDF72BC026F1BA8900B9BE09 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BC126F1BAA700B9BE09 /* UIViewController+AddBehaviors.swift */,
+				CDF72BC326F1BAE200B9BE09 /* UIViewController+AddChild.swift */,
+				CDF72BC526F1BAFA00B9BE09 /* UIViewController+ActivityIndicator.swift */,
+				CDF72BC726F1BB1C00B9BE09 /* UIImageView+ImageSizeAfterAspectFit.swift */,
+				CDF72BC926F1BB3500B9BE09 /* CGSize+ScaledSize.swift */,
+				CDF72BCB26F1BB4F00B9BE09 /* DataTransferError+ConnectionError.swift */,
+				CDE9240426F26A7800512021 /* DoubleExtensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		CDF72BCD26F1BB6200B9BE09 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BCE26F1BB7D00B9BE09 /* Alertable.swift */,
+				CDF72BD026F1BB9B00B9BE09 /* StoryboardInstantiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CDF72BDE26F1BFFC00B9BE09 /* ForecastListTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BDF26F1C04300B9BE09 /* ForecastListTableViewController.swift */,
+				CDF72BE226F1C09900B9BE09 /* ForecastListItemCell.swift */,
+			);
+			path = ForecastListTableView;
+			sourceTree = "<group>";
+		};
+		CDF72BE826F1E05300B9BE09 /* Behaviors */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BE926F1E06E00B9BE09 /* BackButtonEmptyTitleNavigationBarBehavior.swift */,
+				CDF72BEB26F1E08600B9BE09 /* BlackStyleNavigationBarBehavior.swift */,
+			);
+			path = Behaviors;
+			sourceTree = "<group>";
+		};
+		CDF72BED26F1E4A800B9BE09 /* ForecastQueriesList */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BF326F1E83A00B9BE09 /* ViewModel */,
+				CDF72BF226F1E83100B9BE09 /* View */,
+			);
+			path = ForecastQueriesList;
+			sourceTree = "<group>";
+		};
+		CDF72BEE26F1E77600B9BE09 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BF926F20DE800B9BE09 /* ForecastQueriesTableViewController.swift */,
+				CDF72BFB26F20DFE00B9BE09 /* ForecastQueriesTableViewController.storyboard */,
+				CDF72BF826F20DBE00B9BE09 /* Cells */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CDF72BEF26F1E77E00B9BE09 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BF026F1E7AE00B9BE09 /* ForecastQueryListView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		CDF72BF226F1E83100B9BE09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BEE26F1E77600B9BE09 /* UIKit */,
+				CDF72BEF26F1E77E00B9BE09 /* SwiftUI */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDF72BF326F1E83A00B9BE09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BF426F1E85500B9BE09 /* ForecastQueryListViewModel.swift */,
+				CDF72BF626F1E89600B9BE09 /* ForecastQueryListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDF72BF826F20DBE00B9BE09 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CDF72BFD26F20EB000B9BE09 /* ForecastQueriesItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD02F69C26F0749400625DE7 /* weatherforecast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD02F6C726F0749600625DE7 /* Build configuration list for PBXNativeTarget "weatherforecast" */;
+			buildPhases = (
+				CD02F69926F0749400625DE7 /* Sources */,
+				CD02F69A26F0749400625DE7 /* Frameworks */,
+				CD02F69B26F0749400625DE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = weatherforecast;
+			productName = weatherforecast;
+			productReference = CD02F69D26F0749400625DE7 /* weatherforecast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD02F6B226F0749600625DE7 /* weatherforecastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD02F6CA26F0749600625DE7 /* Build configuration list for PBXNativeTarget "weatherforecastTests" */;
+			buildPhases = (
+				CD02F6AF26F0749600625DE7 /* Sources */,
+				CD02F6B026F0749600625DE7 /* Frameworks */,
+				CD02F6B126F0749600625DE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD02F6B526F0749600625DE7 /* PBXTargetDependency */,
+			);
+			name = weatherforecastTests;
+			productName = weatherforecastTests;
+			productReference = CD02F6B326F0749600625DE7 /* weatherforecastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD02F6BD26F0749600625DE7 /* weatherforecastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD02F6CD26F0749600625DE7 /* Build configuration list for PBXNativeTarget "weatherforecastUITests" */;
+			buildPhases = (
+				CD02F6BA26F0749600625DE7 /* Sources */,
+				CD02F6BB26F0749600625DE7 /* Frameworks */,
+				CD02F6BC26F0749600625DE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD02F6C026F0749600625DE7 /* PBXTargetDependency */,
+			);
+			name = weatherforecastUITests;
+			productName = weatherforecastUITests;
+			productReference = CD02F6BE26F0749600625DE7 /* weatherforecastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD02F69526F0749400625DE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CD02F69C26F0749400625DE7 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					CD02F6B226F0749600625DE7 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+						TestTargetID = CD02F69C26F0749400625DE7;
+					};
+					CD02F6BD26F0749600625DE7 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CD02F69C26F0749400625DE7;
+					};
+				};
+			};
+			buildConfigurationList = CD02F69826F0749400625DE7 /* Build configuration list for PBXProject "weatherforecast" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD02F69426F0749400625DE7;
+			productRefGroup = CD02F69E26F0749400625DE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD02F69C26F0749400625DE7 /* weatherforecast */,
+				CD02F6B226F0749600625DE7 /* weatherforecastTests */,
+				CD02F6BD26F0749600625DE7 /* weatherforecastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD02F69B26F0749400625DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF72BFC26F20DFE00B9BE09 /* ForecastQueriesTableViewController.storyboard in Resources */,
+				CD02F6AD26F0749600625DE7 /* LaunchScreen.storyboard in Resources */,
+				CD02F6AA26F0749600625DE7 /* Assets.xcassets in Resources */,
+				CDF72BDD26F1BD5A00B9BE09 /* ForecastListViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD02F6B126F0749600625DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD02F6BC26F0749600625DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD02F69926F0749400625DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD02F74026F09D9700625DE7 /* APIEndpoints.swift in Sources */,
+				CD02F6DD26F07F7800625DE7 /* AppFlowCoordinator.swift in Sources */,
+				CD02F74C26F09FFF00625DE7 /* ForecastRequestDTO+Mapping.swift in Sources */,
+				CD02F6EE26F083FB00625DE7 /* Forecast.swift in Sources */,
+				CDF72BD126F1BB9B00B9BE09 /* StoryboardInstantiable.swift in Sources */,
+				CDF72BCA26F1BB3500B9BE09 /* CGSize+ScaledSize.swift in Sources */,
+				CD02F76B26F0EDA400625DE7 /* ForecastsResponseEntity+Mapping.swift in Sources */,
+				CDF72BEC26F1E08600B9BE09 /* BlackStyleNavigationBarBehavior.swift in Sources */,
+				CD02F6DB26F07F3E00625DE7 /* AppConfiguration.swift in Sources */,
+				CDF72BE526F1C31900B9BE09 /* ForecastListViewModel.swift in Sources */,
+				CDF72BD726F1BC0100B9BE09 /* LoadingView.swift in Sources */,
+				CD02F74326F09E3000625DE7 /* DataTransferService.swift in Sources */,
+				CD02F75026F0A66700625DE7 /* ForecastRepositoryImpl.swift in Sources */,
+				CDF72BC826F1BB1C00B9BE09 /* UIImageView+ImageSizeAfterAspectFit.swift in Sources */,
+				CD02F74526F09E4600625DE7 /* NetworkService.swift in Sources */,
+				CDF72BFA26F20DE800B9BE09 /* ForecastQueriesTableViewController.swift in Sources */,
+				CD02F75A26F0AB9500625DE7 /* RepositoryTask.swift in Sources */,
+				CDF72BC226F1BAA700B9BE09 /* UIViewController+AddBehaviors.swift in Sources */,
+				CD02F75726F0A8B600625DE7 /* ConnectionError.swift in Sources */,
+				CD02F6EB26F083B600625DE7 /* ForecastQueriesStorage.swift in Sources */,
+				CD02F75D26F0C8F200625DE7 /* SearchForecastUseCase.swift in Sources */,
+				CD02F6DF26F07FA000625DE7 /* AppDIContainer.swift in Sources */,
+				CDE9240926F3B40700512021 /* ForecastImagesRepository.swift in Sources */,
+				CDF72BEA26F1E06E00B9BE09 /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */,
+				CDF72BF526F1E85500B9BE09 /* ForecastQueryListViewModel.swift in Sources */,
+				CD02F6A126F0749400625DE7 /* AppDelegate.swift in Sources */,
+				CDF72BBB26F1B9CE00B9BE09 /* ForecastSearchFlowCoordinator.swift in Sources */,
+				CDE9240726F3B3B000512021 /* ForecastImagesRepositoryImpl.swift in Sources */,
+				CDF72BD326F1BBB900B9BE09 /* Observable.swift in Sources */,
+				CDF72BDB26F1BCE300B9BE09 /* ForecastListViewController.swift in Sources */,
+				CDF72BE326F1C09900B9BE09 /* ForecastListItemCell.swift in Sources */,
+				CD02F74E26F0A0B800625DE7 /* ForecastResponseDTO+Mapping.swift in Sources */,
+				CDF72BCF26F1BB7D00B9BE09 /* Alertable.swift in Sources */,
+				CD02F76226F0CBB900625DE7 /* ForecastQueriesRepository.swift in Sources */,
+				CDF72BC426F1BAE200B9BE09 /* UIViewController+AddChild.swift in Sources */,
+				CD02F75326F0A77E00625DE7 /* ForecastRepository.swift in Sources */,
+				CDF72BFE26F20EB000B9BE09 /* ForecastQueriesItemCell.swift in Sources */,
+				CDF72BF126F1E7AE00B9BE09 /* ForecastQueryListView.swift in Sources */,
+				CD02F75526F0A8A100625DE7 /* Cancelable.swift in Sources */,
+				CDF72BCC26F1BB4F00B9BE09 /* DataTransferError+ConnectionError.swift in Sources */,
+				CDF72BF726F1E89600B9BE09 /* ForecastQueryListItemViewModel.swift in Sources */,
+				CD02F6E926F082C900625DE7 /* CoreDataStorage.xcdatamodeld in Sources */,
+				CDE9240526F26A7800512021 /* DoubleExtensions.swift in Sources */,
+				CDF72BE026F1C04300B9BE09 /* ForecastListTableViewController.swift in Sources */,
+				CD02F74726F09E5000625DE7 /* Endpoint.swift in Sources */,
+				CDF72BC626F1BAFA00B9BE09 /* UIViewController+ActivityIndicator.swift in Sources */,
+				CD02F76626F0D74900625DE7 /* ForecastQueriesRepositoryImpl.swift in Sources */,
+				CD02F6F026F0840B00625DE7 /* ForecastQuery.swift in Sources */,
+				CD02F6F426F0903500625DE7 /* CoreDataForecastQueriesStorage.swift in Sources */,
+				CD02F74926F09E5D00625DE7 /* NetworkConfig.swift in Sources */,
+				CD02F76426F0CF9200625DE7 /* FetchRecentForecastQueriesUseCase.swift in Sources */,
+				CD02F6D926F07E9600625DE7 /* AppAppearance.swift in Sources */,
+				CD02F73A26F09BCA00625DE7 /* ForecastQueryEntity+Mapping.swift in Sources */,
+				CD02F73C26F09CF000625DE7 /* ForecastResponseStorage.swift in Sources */,
+				CD02F6E626F0822D00625DE7 /* CoreDataStorage.swift in Sources */,
+				CD02F76826F0DA0100625DE7 /* CoreDataForecastResponseStorage.swift in Sources */,
+				CD02F6E126F0805400625DE7 /* WeatherForecastSceneDIContainer.swift in Sources */,
+				CDF72BE726F1C8CC00B9BE09 /* ForecastListItemViewModel.swift in Sources */,
+				CDF72BD526F1BBD700B9BE09 /* AccessibilityIdentifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD02F6AF26F0749600625DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE29F0926F472E300F4DFE3 /* CoreDataStorage.swift in Sources */,
+				CDE29F1F26F4B9D500F4DFE3 /* AppAppearance.swift in Sources */,
+				CDE29F2226F4B9DB00F4DFE3 /* AppDIContainer.swift in Sources */,
+				CDE29F2C26F4BA0F00F4DFE3 /* UIViewController+AddChild.swift in Sources */,
+				CDE29EFB26F46C0100F4DFE3 /* NetworkService.swift in Sources */,
+				CDE29F2026F4B9D700F4DFE3 /* AppConfiguration.swift in Sources */,
+				CDE29F3426F4BA6E00F4DFE3 /* StoryboardInstantiable.swift in Sources */,
+				CDE29F3226F4BA5700F4DFE3 /* CoreDataForecastResponseStorage.swift in Sources */,
+				CDE29F3526F4BA7800F4DFE3 /* ForecastQueriesItemCell.swift in Sources */,
+				CDE29F2626F4B9EB00F4DFE3 /* ForecastListItemCell.swift in Sources */,
+				CDE29F2326F4B9DD00F4DFE3 /* WeatherForecastSceneDIContainer.swift in Sources */,
+				CDE29F3826F4BA9900F4DFE3 /* AccessibilityIdentifier.swift in Sources */,
+				CDE29EFA26F46BFF00F4DFE3 /* DataTransferService.swift in Sources */,
+				CDE29F1B26F4B9C900F4DFE3 /* BackButtonEmptyTitleNavigationBarBehavior.swift in Sources */,
+				CDE29F0526F472AA00F4DFE3 /* ForecastRequestDTO+Mapping.swift in Sources */,
+				CDE29F0726F472BD00F4DFE3 /* ForecastQueriesStorage.swift in Sources */,
+				CDE29F3026F4BA1700F4DFE3 /* DataTransferError+ConnectionError.swift in Sources */,
+				CDE29F0326F46C1C00F4DFE3 /* SearchForecastUseCase.swift in Sources */,
+				CDE29F0126F46C1200F4DFE3 /* RepositoryTask.swift in Sources */,
+				CDE29F0F26F4B4B000F4DFE3 /* NetworkConfigurableMock.swift in Sources */,
+				CDE29EFE26F46C0A00F4DFE3 /* ForecastRepositoryImpl.swift in Sources */,
+				CDE29EFD26F46C0500F4DFE3 /* NetworkConfig.swift in Sources */,
+				CDE29F0026F46C0E00F4DFE3 /* ForecastImagesRepositoryImpl.swift in Sources */,
+				CDE29F2D26F4BA1100F4DFE3 /* UIViewController+ActivityIndicator.swift in Sources */,
+				CDE29F0226F46C1A00F4DFE3 /* FetchRecentForecastQueriesUseCase.swift in Sources */,
+				CDE29F2426F4B9E500F4DFE3 /* ForecastListViewController.swift in Sources */,
+				CDE29F1E26F4B9D300F4DFE3 /* AppDelegate.swift in Sources */,
+				CDE29F2726F4B9EF00F4DFE3 /* ForecastQueryListViewModel.swift in Sources */,
+				CDE29EF326F46AE000F4DFE3 /* Forecast.swift in Sources */,
+				CDE29F0626F472AC00F4DFE3 /* ForecastResponseDTO+Mapping.swift in Sources */,
+				CDE29F0826F472D600F4DFE3 /* ForecastResponseStorage.swift in Sources */,
+				CDE29F2B26F4BA0C00F4DFE3 /* UIViewController+AddBehaviors.swift in Sources */,
+				CDE29EF226F46A3800F4DFE3 /* SeachForecastUseCaseTest.swift in Sources */,
+				CDE29F3326F4BA5D00F4DFE3 /* ForecastQueryListView.swift in Sources */,
+				CDE29F3926F4BAC800F4DFE3 /* CoreDataStorage.xcdatamodeld in Sources */,
+				CDE29F1326F4B50700F4DFE3 /* DataTransferServiceTests.swift in Sources */,
+				CDE29F0C26F4B47600F4DFE3 /* NetworkServiceTests.swift in Sources */,
+				CDE29F3B26F4BAD400F4DFE3 /* ForecastsResponseEntity+Mapping.swift in Sources */,
+				CDE29F2826F4B9F100F4DFE3 /* ForecastQueryListItemViewModel.swift in Sources */,
+				CDE29EF926F46BF900F4DFE3 /* ConnectionError.swift in Sources */,
+				CDE29F0426F46C3C00F4DFE3 /* APIEndpoints.swift in Sources */,
+				CDE29F2F26F4BA1500F4DFE3 /* CGSize+ScaledSize.swift in Sources */,
+				CDE29EFF26F46C0C00F4DFE3 /* ForecastQueriesRepositoryImpl.swift in Sources */,
+				CDE29F2926F4B9F800F4DFE3 /* ForecastQueriesTableViewController.swift in Sources */,
+				CDE29F3126F4BA5000F4DFE3 /* CoreDataForecastQueriesStorage.swift in Sources */,
+				CDE29EF526F46B3400F4DFE3 /* ForecastRepository.swift in Sources */,
+				CDE29F1A26F4B9B600F4DFE3 /* Observable.swift in Sources */,
+				CDE29F1C26F4B9CB00F4DFE3 /* BlackStyleNavigationBarBehavior.swift in Sources */,
+				CDE29EF626F46B3700F4DFE3 /* ForecastQueriesRepository.swift in Sources */,
+				CDE29EF726F46B3A00F4DFE3 /* ForecastImagesRepository.swift in Sources */,
+				CDE29EF426F46AE400F4DFE3 /* ForecastQuery.swift in Sources */,
+				CDE29F1826F4B86C00F4DFE3 /* ForecastListItemViewModel.swift in Sources */,
+				CDE29F2E26F4BA1300F4DFE3 /* UIImageView+ImageSizeAfterAspectFit.swift in Sources */,
+				CDE29F2126F4B9D900F4DFE3 /* AppFlowCoordinator.swift in Sources */,
+				CDE29EFC26F46C0300F4DFE3 /* Endpoint.swift in Sources */,
+				CDE29EF826F46BF500F4DFE3 /* Cancelable.swift in Sources */,
+				CDE29F3A26F4BACF00F4DFE3 /* ForecastQueryEntity+Mapping.swift in Sources */,
+				CDE29F2526F4B9E800F4DFE3 /* ForecastListTableViewController.swift in Sources */,
+				CDE29F3726F4BA9400F4DFE3 /* LoadingView.swift in Sources */,
+				CDE29F3626F4BA8B00F4DFE3 /* Alertable.swift in Sources */,
+				CDE29F1D26F4B9D000F4DFE3 /* ForecastSearchFlowCoordinator.swift in Sources */,
+				CDE29F3F26F4F07900F4DFE3 /* FetchRecentForecastQueriesUseCaseTest.swift in Sources */,
+				CDE29F1926F4B9A100F4DFE3 /* DoubleExtensions.swift in Sources */,
+				CDE29F3D26F4BD3000F4DFE3 /* ForecastQueriesListViewModel.swift in Sources */,
+				CDE29F1626F4B6A800F4DFE3 /* ForecastListViewModelTests.swift in Sources */,
+				CDE29F1126F4B4C900F4DFE3 /* NetworkSessionManagerMock.swift in Sources */,
+				CDE29F1726F4B86800F4DFE3 /* ForecastListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD02F6BA26F0749600625DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD02F6C326F0749600625DE7 /* weatherforecastUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD02F6B526F0749600625DE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD02F69C26F0749400625DE7 /* weatherforecast */;
+			targetProxy = CD02F6B426F0749600625DE7 /* PBXContainerItemProxy */;
+		};
+		CD02F6C026F0749600625DE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD02F69C26F0749400625DE7 /* weatherforecast */;
+			targetProxy = CD02F6BF26F0749600625DE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD02F6AB26F0749600625DE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD02F6AC26F0749600625DE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD02F6C526F0749600625DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD02F6C626F0749600625DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD02F6C826F0749600625DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				API_BASE_URL = "https://api.openweathermap.org/data/2.5/forecast/";
+				APP_ID = 60c6fbeb4b93ac653c492ba806fc346d;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S69NTWX57G;
+				IMAGE_BASE_URL = "http://openweathermap.org/";
+				INFOPLIST_FILE = "$(SRCROOT)/weatherforecast/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giapvo.weatherforecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD02F6C926F0749600625DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				API_BASE_URL = "https://api.openweathermap.org/data/2.5/forecast/";
+				APP_ID = 60c6fbeb4b93ac653c492ba806fc346d;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S69NTWX57G;
+				IMAGE_BASE_URL = "http://openweathermap.org/";
+				INFOPLIST_FILE = "$(SRCROOT)/weatherforecast/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giapvo.weatherforecast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD02F6CB26F0749600625DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S69NTWX57G;
+				INFOPLIST_FILE = weatherforecastTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giapvo.weatherforecastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weatherforecast.app/weatherforecast";
+			};
+			name = Debug;
+		};
+		CD02F6CC26F0749600625DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S69NTWX57G;
+				INFOPLIST_FILE = weatherforecastTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giapvo.weatherforecastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/weatherforecast.app/weatherforecast";
+			};
+			name = Release;
+		};
+		CD02F6CE26F0749600625DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S69NTWX57G;
+				INFOPLIST_FILE = weatherforecastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giapvo.weatherforecastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = weatherforecast;
+			};
+			name = Debug;
+		};
+		CD02F6CF26F0749600625DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S69NTWX57G;
+				INFOPLIST_FILE = weatherforecastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = giapvo.weatherforecastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = weatherforecast;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD02F69826F0749400625DE7 /* Build configuration list for PBXProject "weatherforecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD02F6C526F0749600625DE7 /* Debug */,
+				CD02F6C626F0749600625DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD02F6C726F0749600625DE7 /* Build configuration list for PBXNativeTarget "weatherforecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD02F6C826F0749600625DE7 /* Debug */,
+				CD02F6C926F0749600625DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD02F6CA26F0749600625DE7 /* Build configuration list for PBXNativeTarget "weatherforecastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD02F6CB26F0749600625DE7 /* Debug */,
+				CD02F6CC26F0749600625DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD02F6CD26F0749600625DE7 /* Build configuration list for PBXNativeTarget "weatherforecastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD02F6CE26F0749600625DE7 /* Debug */,
+				CD02F6CF26F0749600625DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD02F6E726F082C900625DE7 /* CoreDataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD02F6E826F082C900625DE7 /* CoreDataStorage.xcdatamodel */,
+			);
+			currentVersion = CD02F6E826F082C900625DE7 /* CoreDataStorage.xcdatamodel */;
+			path = CoreDataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CD02F69526F0749400625DE7 /* Project object */;
+}

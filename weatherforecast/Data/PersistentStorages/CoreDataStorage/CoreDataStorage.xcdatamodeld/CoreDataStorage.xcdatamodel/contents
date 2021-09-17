@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="21A5294g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ForecastDayResponseEntity" representedClassName="ForecastDayResponseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="clouds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="deg" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dt" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="gust" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pop" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pressure" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rain" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sunrise" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sunset" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tempDay" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tempEve" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tempMax" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tempMin" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tempMorn" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tempNight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weatherDescription" optional="YES" attributeType="String"/>
+        <attribute name="weatherIcon" optional="YES" attributeType="String"/>
+        <attribute name="weatherId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weatherMain" optional="YES" attributeType="String"/>
+        <relationship name="forecastsResponse" maxCount="1" deletionRule="Nullify" destinationEntity="ForecastsResponseEntity" inverseName="forecasts" inverseEntity="ForecastsResponseEntity"/>
+    </entity>
+    <entity name="ForecastQueryEntity" representedClassName="ForecastQueryEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="query" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ForecastRequestEntity" representedClassName="ForecastRequestEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="cnt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="q" optional="YES" attributeType="String"/>
+        <attribute name="units" optional="YES" attributeType="String"/>
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ForecastsResponseEntity" inverseName="request" inverseEntity="ForecastsResponseEntity"/>
+    </entity>
+    <entity name="ForecastsResponseEntity" representedClassName="ForecastsResponseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="cityCountry" optional="YES" attributeType="String"/>
+        <attribute name="cityId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cityName" optional="YES" attributeType="String"/>
+        <attribute name="cnt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="forecasts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ForecastDayResponseEntity" inverseName="forecastsResponse" inverseEntity="ForecastDayResponseEntity"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ForecastRequestEntity" inverseName="response" inverseEntity="ForecastRequestEntity"/>
+    </entity>
+    <elements>
+        <element name="ForecastDayResponseEntity" positionX="-6466.86279296875" positionY="-3384.506591796875" width="128" height="359"/>
+        <element name="ForecastQueryEntity" positionX="-6902.14599609375" positionY="-3562.546295166015" width="128" height="73"/>
+        <element name="ForecastRequestEntity" positionX="-7056.496826171875" positionY="-3329.325744628906" width="128" height="104"/>
+        <element name="ForecastsResponseEntity" positionX="-6705.347900390625" positionY="-3341.423492431641" width="128" height="119"/>
+    </elements>
+</model>
