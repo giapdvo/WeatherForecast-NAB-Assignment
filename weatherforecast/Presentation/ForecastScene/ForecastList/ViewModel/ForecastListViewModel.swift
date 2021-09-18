@@ -91,13 +91,13 @@ final class DefaultForecastListViewModel: ForecastListViewModel {
         forecastLoadTask = searchForecastUseCase.execute(
             params: .init(query: forecastQuery),
             cached: updateScreen,
-            completion: { result in
+            completion: {[weak self] result in
                 switch result {
                 case .success(let forecast):
-                    self.updateScreen(forecast)
+                    self?.updateScreen(forecast)
                 case .failure(let error):
-                    self.handle(error: error)
-                    self.loading.value = .none
+                    self?.handle(error: error)
+                    self?.loading.value = .none
                 }
 
             })

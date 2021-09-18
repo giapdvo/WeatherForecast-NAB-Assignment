@@ -35,9 +35,6 @@ final class ForecastSearchFlowCoordinator {
         forecastListVC = vc
     }
 
-    private func showForecastDetails(forecast: Forecast) {
-       
-    }
 
     private func showForecastQueriesSuggestions(didSelect: @escaping (ForecastQuery) -> Void) {
         guard let forecastListViewController = forecastListVC, forecastQueriesSuggestionsVC == nil,

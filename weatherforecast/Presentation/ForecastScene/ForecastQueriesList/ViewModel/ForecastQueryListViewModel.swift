@@ -40,10 +40,10 @@ final class DefaultForecastQueryListViewModel: ForecastQueryListViewModel {
     
     private func updateForecastQueries() {
     
-        fetchRecentForecastQueriesUseCase.execute(params: .init(maxCount: numberOfQueriesToShow)) { result in
+        fetchRecentForecastQueriesUseCase.execute(params: .init(maxCount: numberOfQueriesToShow)) {[weak self] result in
             switch result {
             case .success(let items):
-                self.items.value = items.map { $0.query }.map(ForecastQueryListItemViewModel.init)
+                self?.items.value = items.map { $0.query }.map(ForecastQueryListItemViewModel.init)
             case .failure: break
             }
         }
