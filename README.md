@@ -60,7 +60,7 @@ Below are the features that the weather forecast application supported.
 - Data Binding using Observable without 3rd party libraries
 - Dependency Injection
 - Flow Coordinator
-- Data caching (Using CoreDate)
+- Data caching (Using CoreData)
 - Error Handling
 
 ## High-Level Design
