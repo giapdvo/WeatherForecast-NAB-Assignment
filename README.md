@@ -2,10 +2,22 @@
 
 ## Table Of Content
 
-- [Problem Statement](#problem-statement)
-- [Architecture](#architecture)
-- [Project Structure](#upgrade-modules)
-- [Guidelines](#guidelines)
+- [Weather Forecast](#weather-forecast)
+  - [Table Of Content](#table-of-content)
+  - [Problem Statement](#problem-statement)
+  - [Usage](#usage)
+      - [AppID and Base URL](#appid-and-base-url)
+      - [Cache](#cache)
+  - [Demo](#demo)
+  - [Architecture](#architecture)
+  - [High-Level Design](#high-level-design)
+    - [Layer](#layer)
+    - [Dependency Direction](#dependency-direction)
+  - [Low-level Design](#low-level-design)
+    - [Data Flow](#data-flow)
+  - [Project Structure](#project-structure)
+  - [Includes](#includes)
+  - [Author](#author)
 
 ## Problem Statement
 
@@ -22,6 +34,23 @@ Below are the features that the weather forecast application supported.
 - [x] The application is able to handle failures.
 - [x] The application is able to support the disability to scale large text for who can't see the text clearly.
 - [x] The application is able to support the disability to read out the text using VoiceOver controls.
+
+## Usage
+
+#### AppID and Base URL
+
+![Alt text](README_FILES/Setup.png?raw=true 'Setting URL')
+
+#### Cache
+
+![Alt text](README_FILES/MaxCache.png?raw=true 'Data Flow Between Components')
+
+## Demo
+
+<img src=README_FILES/Demo1.png height=500> 
+<img src=README_FILES/Demo2.png height=500>
+<img src=README_FILES/Demo3.png height=500> 
+<img src=README_FILES/Demo4.png height=500>
 
 ## Architecture
 
@@ -50,7 +79,7 @@ Below are the features that the weather forecast application supported.
 
 ### Data Flow
 
-![Alt text](README_FILES/Dataflow.png?raw=true 'Data Flow Between Components')
+![Alt text](README_FILES/DataFlow.png?raw=true 'Data Flow Between Components')
 
 1. View(UI) calls method from ViewModel(Presenter)
 2. ViewModel executes Use Case(Domain)
@@ -86,4 +115,16 @@ weatherforecast/
 - `Common`: Some common code for reuse on different places
 - `Resources`: All of resouces that using in the app exp: Localization, Assets, Audio files etc...
 
-## Demo
+## Includes
+
+- Caching apply for weather result for example. Do not cache for weather icon yet.
+- Unit Tests for Use Cases(Domain Layer), ViewModels(Presentation Layer), NetworkService (50% code coverage)
+- UI test with XCUITests
+- Scaling Text base on Device settings
+- VoiceOver controls
+- Dark Mode
+- SwiftUI example, demostration that presentation layer does not change, only UI (at least Xcode 11 required)
+
+## Author
+
+Giap Vo - giapdvo@gmail.com

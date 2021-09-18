@@ -8,9 +8,12 @@
 import Foundation
 
 extension Double {
-    func toTemperature(unit: UnitTemperature, locale: Locale = Locale(identifier: "en_US")) -> String {
+    func toTemperature(unit: UnitTemperature, locale: Locale = Locale(identifier: "en_GB")) -> String {
         let input = Measurement(value: self, unit: unit)
+        
         let formatter = MeasurementFormatter()
+        formatter.numberFormatter.roundingMode = .up
+        formatter.numberFormatter.maximumFractionDigits = 0
         formatter.unitStyle = .medium
         formatter.locale =  locale
         return formatter.string(from: input)
@@ -21,7 +24,7 @@ extension Double {
 
        let dateFormatter = DateFormatter()
        dateFormatter.locale = Locale(identifier: "en_US")
-       dateFormatter.dateStyle = .medium
+       dateFormatter.dateStyle = .full
 
        return dateFormatter.string(from: date)
     }

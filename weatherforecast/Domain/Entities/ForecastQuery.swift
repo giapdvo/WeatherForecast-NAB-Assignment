@@ -16,5 +16,5 @@ enum Unit: String {
 struct ForecastQuery: Equatable {
     let query: String
     let numberOfDay: Int = 7
-    let units: Unit = .standard
+    let units: Unit = .metric
 }

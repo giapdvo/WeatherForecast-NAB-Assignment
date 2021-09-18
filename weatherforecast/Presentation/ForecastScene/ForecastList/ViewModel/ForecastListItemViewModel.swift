@@ -33,6 +33,6 @@ extension ForecastListItemViewModel {
 
 private func averageTempurature(temp: ForeCastDay.Tempurature) -> String {
     let average = (temp.min + temp.max) / 2
-    return average.toTemperature(unit: .celsius)
+    return round(average).toTemperature(unit: .celsius)
 }
 

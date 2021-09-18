@@ -15,6 +15,7 @@ final class WeatherForecastSceneDIContainer: ForecastSearchFlowCoordinatorDepend
     
     private let dependencies: Dependencies
     
+    //Maximum cache for the forecast result. If user search more than maxCache it will cache the last maxium
     private let maxCacheLimit = 5
     
     //MARK: - Persistent Storage
